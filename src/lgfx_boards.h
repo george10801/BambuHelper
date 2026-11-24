@@ -857,8 +857,8 @@ public:
     {
       auto cfg = _bus.config();
       cfg.spi_host   = SPI2_HOST;
-      cfg.spi_mode   = 0;
-      cfg.freq_write = 40000000;
+      cfg.spi_mode   = 3;
+      cfg.freq_write = 20000000;
       cfg.freq_read  = 16000000;
       cfg.pin_sclk   = 21;
       cfg.pin_mosi   = 20;
@@ -870,7 +870,7 @@ public:
     }
     {
       auto cfg = _panel.config();
-      cfg.pin_cs   = 6;
+      cfg.pin_cs   = -1;
       cfg.pin_rst  = 10;
       cfg.pin_busy = -1;
       cfg.memory_width  = 240;
